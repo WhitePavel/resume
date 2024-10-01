@@ -1,0 +1,18 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    container_name: mysite
+    ports:
+      - '80:80'
+    restart: unless-stopped
+    volumes:
+      - /Users/pavelprosvetov/nginx/index.html:/usr/share/nginx/html/index.html
+    networks:
+      - site
+
+networks:
+  site:
+    name: site
+    driver: bridge
+    
