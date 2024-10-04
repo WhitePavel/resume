@@ -7,8 +7,7 @@ services:
       - '80:80'
     restart: unless-stopped
     volumes:
-      - /Users/pavelprosvetov/nginx/index.html:/usr/share/nginx/html/index.html
-      - /Users/pavelprosvetov/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./index.html:/usr/share/nginx/html/index.html
     networks:
       - site
 
